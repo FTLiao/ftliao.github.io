@@ -1,2 +1,4 @@
 name: FengTing Liao
 markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
