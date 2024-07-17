@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ftliao.github.io/posts/post-1/</loc>
-    <lastmod>2024-07-16T17:17:20+02:00</lastmod>
-  </url><url>
     <loc>https://ftliao.github.io/about/</loc>
     <lastmod>2024-07-16T17:17:20+02:00</lastmod>
   </url><url>
@@ -13,6 +10,12 @@
   </url><url>
     <loc>https://ftliao.github.io/posts/</loc>
     <lastmod>2024-07-16T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://ftliao.github.io/posts/20191018_dance_like_pro/</loc>
+    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ftliao.github.io/posts/post-1/</loc>
+    <lastmod>2019-10-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ftliao.github.io/categories/</loc>
   </url><url>
