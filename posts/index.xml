@@ -11,24 +11,17 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 21:40:07 +0200</lastBuildDate>
     <atom:link href="https://ftliao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wanna dance like a pro? A neural network can help you</title>
       <link>https://ftliao.github.io/posts/20191018_dance_like_pro/</link>
-      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Oct 2019 21:40:07 +0200</pubDate>
       <guid>https://ftliao.github.io/posts/20191018_dance_like_pro/</guid>
       <description>A brief introduction to photorealistic video translation with GANs
 Feng-Ting Liao, Ru-Han Wu
 The original post apears here
 Imagine you see your favourite star, perhaps it&amp;rsquo;s Bruno Mars, Beyonce, BTS, or TWICE, dancing amazingly in music videos. You then wonder if you could dance just as good as they do and maybe replicate their moves and reproduce what they did in the videos. Same posture, same movement and even the same tricks of yourself match at the exact timestamp to the stars in their videos.</description>
-    </item>
-    <item>
-      <title>test 001</title>
-      <link>https://ftliao.github.io/posts/post-1/</link>
-      <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://ftliao.github.io/posts/post-1/</guid>
-      <description>test </description>
     </item>
   </channel>
 </rss>
