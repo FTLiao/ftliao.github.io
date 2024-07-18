@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://ftliao.github.io/sitemap.xml

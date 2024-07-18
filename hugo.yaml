@@ -1,4 +1,170 @@
-baseURL: https://example.org/
+baseURL: https://ftliao.github.io
 languageCode: en-us
-title: My New Hugo Site
-theme: ["PaperMod"]
+title: Feng-Ting Liao | Particles of Worlds
+theme: ["PaperMod", "hugo-cite"]
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  math: true
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Feng-Ting Liao | Particles of Worlds
+  description: ""
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Feng-Ting Liao
+  # author: ["Me", "You"] # multiple authors
+  images: ["/images/openimage.jpg"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: light # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: false
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Particles of Worlds"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "\U00002604 [Feng-Ting Liao](https://ftliao.github.io/about/)"
+    # HypLinks: "[[About me](https://ftliao.github.io/about/)] | [[Posts]()]"
+    Content: "Senior Research Scientist at [MediaTek Research](https://i.mediatek.com/mediatekresearch),  working on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, EACL, ASRU. Co-creator of [Breeze](https://huggingface.co/MediaTek-Research/Breeze-7B-Instruct-v1_0), [BreeXe](https://huggingface.co/spaces/MediaTek-Research/Demo-MR-Breexe-8x7B), [GFD](https://github.com/mtkresearch/generative-fusion-decoding), and [Clairaudience](https://github.com/mtkresearch/clairaudience). Prevously a [dark matter hunter](https://lz.lbl.gov) at Oxford University. Opinions are my own."
+
+  customCSS:
+    - css/custom.css 
+  # for left and right algnment
+
+  socialIcons:
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?user=wQtfX2cAAAAJ&hl=en"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/fengtingliao/"
+    - name: github
+      url: "https://github.com/FTLiao"
+    - name: x
+      url: "https://x.com/ft_liao"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # editPost:
+  #   URL: "https://github.com/FTLiao/ftliao.github.io/tree/main/posts"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: false # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    # - identifier: categories
+    #   name: categories
+    #   url: /categories/
+    #   weight: 10
+    # - identifier: tags
+    #   name: tags
+    #   url: /tags/
+    #   weight: 20
+    # - identifier: example
+    #   name: example.org
+    #   url: https://example.org
+    #   weight: 30
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+
+    # Add math compatibility
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true

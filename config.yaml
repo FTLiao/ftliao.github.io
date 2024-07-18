@@ -1,7 +1,8 @@
-baseURL: "https://ftliao.github.io/"
-title: A title to be added
+baseURL: https://ftliao.github.io
+languageCode: en-us
+title: Particles of Worlds
+theme: ["PaperMod"]
 paginate: 5
-theme: PaperMod
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -14,14 +15,14 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
+  title: Particles of Worlds
+  description: "A playground for a curious mind"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
+  author: Feng-Ting Liao
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  DateFormat: "2024-07-16"
+  defaultTheme: light # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -30,7 +31,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
   ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
+  ShowRssButtonInSectionTermList: false
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
@@ -50,7 +51,7 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Home"
+    text: "Particles of Worlds"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -71,18 +72,22 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "\U00002604 Feng-Ting Liao"
+    Content: Senior Research scientist at MediaTek Research, working on large language models, deep reinforcment learning for chip design, and representation learning. Developer of [Breeze/BreeXe](). Prev. a dark matter hunter at Univ. of Oxford. Opinions are my own.
+
+  customCSS:
+    - css/custom.css 
+  # for left and right algnment
 
   socialIcons:
     - name: googlescholar
-      url: "https://scholar.google.com/"
+      url: "https://scholar.google.com/citations?user=wQtfX2cAAAAJ&hl=en"
     - name: linkedin
-      url: "https://stackoverflow.com"
+      url: "https://www.linkedin.com/in/fengtingliao/"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/FTLiao"
     - name: x
-      url: "https://x.com/"
+      url: "https://x.com/ft_liao"
 
   analytics:
     google:
@@ -123,14 +128,14 @@ menu:
       name: Posts
       url: /posts/
       weight: 10
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
+    # - identifier: categories
+    #   name: categories
+    #   url: /categories/
+    #   weight: 10
+    # - identifier: tags
+    #   name: tags
+    #   url: /tags/
+    #   weight: 20
     # - identifier: example
     #   name: example.org
     #   url: https://example.org

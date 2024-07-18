@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/</loc>
-    <lastmod>2024-07-16T12:50:19+02:00</lastmod>
+    <loc>https://ftliao.github.io/about/</loc>
+    <lastmod>2024-07-16T17:17:20+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/about/</loc>
+    <loc>https://ftliao.github.io/</loc>
+    <lastmod>2024-07-16T17:17:20+02:00</lastmod>
+  </url><url>
+    <loc>https://ftliao.github.io/posts/</loc>
     <lastmod>2024-07-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/post-1/</loc>
-    <lastmod>2023-07-16T19:45:00+00:00</lastmod>
+    <loc>https://ftliao.github.io/posts/20191018_dance_like_pro/</loc>
+    <lastmod>2019-10-18T21:40:07+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/post-2/</loc>
-    <lastmod>2023-07-16T19:45:00+00:00</lastmod>
+    <loc>https://ftliao.github.io/categories/</loc>
   </url><url>
-    <loc>https://example.org/categories/</loc>
-  </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://ftliao.github.io/tags/</loc>
   </url>
 </urlset>

@@ -1,0 +1,11 @@
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
+
+<!-- <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+</script> -->
+
+<!-- {{ .Date.Format "2006-01-02" }} -->
+
+<link rel="stylesheet" type="text/css" href="{{ "/hugo-cite.css" | relURL }}" />
