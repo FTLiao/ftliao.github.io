@@ -6,6 +6,7 @@ url: "/about/"
 params:
     math: true
 ---
+
 [[googlescholar](https://scholar.google.com/citations?user=wQtfX2cAAAAJ&hl=en)][[linkedin](https://www.linkedin.com/in/fengtingliao)]
 
 
@@ -13,7 +14,7 @@ I am a Senior Research Scientist at MediaTek Research, working on large language
 
 With a team of talented researchers, I co-created and productized [BreeXe](https://huggingface.co/spaces/MediaTek-Research/Demo-MR-Breexe-8x7B), a commercialized LLM beating GPT3.5 on both knowledge and chat capabilities in Traditional Chinese, and opensourced [Breeze](https://huggingface.co/MediaTek-Research/Breeze-7B-Instruct-v1_0), a 7B LM with >11k downloads, for supporting research and entrepreneural efforts in LLMs in Traditional Chinese speaking communities.
 
-
+To get in touch, please email to *fengting.liao19[AT]gmail.com*
 
 <!-- Prior to  -->
 
@@ -42,6 +43,14 @@ With a team of talented researchers, I co-created and productized [BreeXe](https
 - DPhil in Particle Physics, University of Oxford, 2013-2018
 - B.Sc. in Electrophysics, National Chiao Tung University, 2008-2012
 
+
+### Mentorship
+
+<!-- - Mentorship -->
+- Tzu-Lin Kuo (M.S student at NTU CSIE)
+- Yung-Chieh Chan (M.S student at Stanford)
+- Ren-Chu Wang (M.S student at GeorgiaTech)
+- Chien-Yi Yang (PhD student at UCSD)
 
 <!-- Just don't work in hugo -->
 <!-- <style>

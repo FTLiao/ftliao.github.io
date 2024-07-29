@@ -1,0 +1,1 @@
+hugo server --disableFastRender -D -p 3131
