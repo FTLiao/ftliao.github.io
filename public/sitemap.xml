@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:3131/about/</loc>
+    <loc>https://ftliao.github.io/about/</loc>
     <lastmod>2024-07-16T17:17:20+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:3131/</loc>
+    <loc>https://ftliao.github.io/</loc>
     <lastmod>2024-07-16T17:17:20+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:3131/posts/</loc>
+    <loc>https://ftliao.github.io/posts/</loc>
     <lastmod>2024-07-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:3131/posts/20191018_dance_like_pro/</loc>
+    <loc>https://ftliao.github.io/posts/20191018_dance_like_pro/</loc>
     <lastmod>2019-10-18T21:40:07+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:3131/categories/</loc>
+    <loc>https://ftliao.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:3131/tags/</loc>
+    <loc>https://ftliao.github.io/tags/</loc>
   </url>
 </urlset>

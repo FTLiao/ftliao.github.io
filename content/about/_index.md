@@ -7,7 +7,7 @@ params:
     math: true
 ---
 
-[[googlescholar](https://scholar.google.com/citations?user=wQtfX2cAAAAJ&hl=en)][[linkedin](https://www.linkedin.com/in/fengtingliao)]
+[[Resume](https://ftliao.github.io/data/240731_FengTingLiao_resume.pdf)][[googlescholar](https://scholar.google.com/citations?user=wQtfX2cAAAAJ&hl=en)][[linkedin](https://www.linkedin.com/in/fengtingliao)]
 
 
 I am a Senior Research Scientist at MediaTek Research, working on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, EACL, ASRU.
