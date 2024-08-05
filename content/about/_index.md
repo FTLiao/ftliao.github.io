@@ -7,12 +7,16 @@ params:
     math: true
 ---
 
-[[resume](https://ftliao.github.io/data/240802_FengTingLiao_resume.pdf)][[cv](https://ftliao.github.io/data/240802_FengTingLiao_CV.pdf)][[googlescholar](https://scholar.google.com/citations?user=wQtfX2cAAAAJ&hl=en)][[linkedin](https://www.linkedin.com/in/fengtingliao)]
+[[resume](https://ftliao.github.io/data/240805_FengTingLiao_resume.pdf)][[cv](https://ftliao.github.io/data/240805_FengTingLiao_CV.pdf)][[googlescholar](https://scholar.google.com/citations?user=wQtfX2cAAAAJ&hl=en)][[linkedin](https://www.linkedin.com/in/fengtingliao)]
 
 
-I am a Senior Research Scientist at MediaTek Research, working on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, EACL, ASRU.
+<!-- I am a Senior Research Scientist at MediaTek Research, working on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, EACL, ASRU. -->
 
-With a team of talented researchers, I co-created and productized [BreeXe](https://huggingface.co/spaces/MediaTek-Research/Demo-MR-Breexe-8x7B), a commercialized LLM beating GPT3.5 on both knowledge and chat capabilities in Traditional Chinese, and opensourced [Breeze](https://huggingface.co/MediaTek-Research/Breeze-7B-Instruct-v1_0), a 7B LM with >11k downloads, for supporting research and entrepreneural efforts in LLMs in Traditional Chinese speaking communities.
+<!-- seasoned technical professional with a strong background in machine learning, natural language processing, and chip design. My expertise lies not only in developing cutting-edge technologies but also in effectively communicating complex ideas and orchestrating cross-functional collaborations to bring innovative products to market. -->
+
+I am a Senior Research Scientist at MediaTek Research with a track record on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, EACL, ASRU. 
+
+My expertise lies not only in developing cutting-edge technologies but also in effectively communicating complex ideas and synergizing cross-functional collaborations to bring innovative products to market. With a team of talented researchers and seasoned professionals across legal, product, and marketing, I co-created and productized **[BreeXe](https://huggingface.co/spaces/MediaTek-Research/Demo-MR-Breexe-8x7B), a commercialized LLM beating GPT3.5 on both knowledge and chat capabilities in Traditional Chinese**, and open-sourced **[Breeze](https://huggingface.co/MediaTek-Research/Breeze-7B-Instruct-v1_0), a 7B LLM with >11k downloads**, for supporting research and entrepreneural efforts in LLMs in Traditional Chinese speaking communities.
 
 To get in touch, please email to *fengting.liao19[AT]gmail.com*
 
@@ -20,10 +24,10 @@ To get in touch, please email to *fengting.liao19[AT]gmail.com*
 
 
 ### Work Experience
-- **MediaTek Research** | Senior Research Scientist, Taipei Taiwan, Nov 2020 - Present 
-- **Umbo Computer Vision** | Research Engineer, Taipei Taiwan, Mar 2019 - Feb 2020
-- **Burberry** | Data Science Intern, London, UK, Dec 2018
-- **University of Oxford** | Postdoctoral Research Assistant, Oxford, UK, Jan - Dec 2018
+- **Senior Research Scientist | MediaTek Research**, Nov 2020 - Present, Taipei Taiwan
+- **Research Engineer | Umbo Computer Vision**, Mar 2019 - Feb 2020, Taipei Taiwan
+- **Data Science Intern | Burberry**, Dec 2018, London, UK
+- **Postdoctoral Research Assistant | University of Oxford**, Jan - Dec 2018, Oxford, UK
 
 
 
