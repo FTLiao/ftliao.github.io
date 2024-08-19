@@ -21,7 +21,7 @@ Specifically, given input source data $x^s,y^s\sim\mathcal{P_s}$ used for traini
 Specifically, the work by [1] proposes the learning of a feature extraction model designed to align latent distributions at test time using a gradient-based update informed by a self-supervised objective. In particular, the training problem is formulated as follows:
 
 $$
-{\tilde{\theta_e},\tilde{\theta_m},\tilde{\theta_s}}\leftarrow\argmin_{\theta_e,\theta_m,\theta_s}\mathcal{L}(x^s,y^s;\theta_m,\theta_e)+\mathcal{L}(x^s;\theta_s,\theta_e),
+{\tilde{\theta_e},\tilde{\theta_m},\tilde{\theta_s}}\leftarrow \arg\min_{\theta_e,\theta_m,\theta_s}\mathcal{L}(x^s,y^s;\theta_m,\theta_e)+\mathcal{L}(x^s;\theta_s,\theta_e),
 $$
 
 where $\theta_m$ is the model for the main supervised task; $\theta_e$ is the feature extractor; $\theta_s$ is the self-supervised task model.
@@ -29,7 +29,7 @@ where $\theta_m$ is the model for the main supervised task; $\theta_e$ is the fe
 At test-time, only the feature extractor is updated by minimizing the loss associated with the self-supervised task over the feature extraction model, specifically:
 
 $$
-\hat{\theta}_e\leftarrow\argmin_{\theta_{e}^{'}}\mathcal{L}(x^t;\tilde{\theta_s},\theta^{'}_e),
+\hat{\theta}_e\leftarrow\arg\min_{\theta_{e}^{'}}\mathcal{L}(x^t;\tilde{\theta_s},\theta^{'}_e),
 $$
 
 where $\theta_e^{'}$ is initialized with $\tilde{\theta}_e$. The final prediction is obtained by the optimized $\tilde{\theta_m}$ main task model and the updated feature extractor $\hat{\theta}_e$. 
@@ -54,7 +54,7 @@ The concept of test-time training (TTT) in sequence modeling for language has a 
 Below, I summarize my notes on [5], using 'TTT model' synonymously with the 'TTT-Linear' framework presented in [5].
 
 Sequence modeling can be understood as a mechanism for storing historical content within the hidden state of the model. Here's a concise overview, with reference to the figure below from [5]:
-![TTT-Linear-Fig-4](TTT-Linear-Fig-4.png)
+![TTT-Linear-Fig-4](../TTT-Linear-Fig-4.png)
 - Naive RNN: In a traditional RNN, the hidden state is represented as an activation vector, which is updated based on model parameters. This vector captures information from the sequence as it processes each new element.
 - Self-Attention: In models utilizing self-attention, the hidden state comprises a collection of uncompressed vectors corresponding to past keys and values. These vectors represent the sequence's historical information in a more granular form compared to RNNs.
 - Naive TTT: For a Naive TTT approach, the hidden state is formulated as parameters of a linear model. Here, updates to the model are performed through gradient descent applied to a self-supervised loss. This approach integrates adaptive mechanisms directly into the model's structure.
@@ -64,7 +64,7 @@ According to [5], the Naive TTT approach is shown to be equivalent to linear att
 The optimization process for TTT-Linear is structured as a bilevel optimization problem, comprising an inner loop and an outer loop. The inner loop involves updating the hidden state model sequentially via gradient descent based on a denoising autoencoding loss. The outer loop focuses on updating the remaining model parameters with respect to a next-token prediction loss. In contrast to dynamic evaluation [6], where bilevel optimization involves second-order optimization techniques, the optimization in TTT-Linear decouples the inner and outer loops. Specifically, the inner loop in TTT-Linear can be conceptualized as an additional layer within the neural model for language modeling.
 
 The TTT model is scaled to 1.3 billion parameters and demonstrated that it outperforms transformers when trained with a sequence length of 32k tokens (see Figure below, adapted from Figure 12 of [5]).
-![TTT-Linear-Fig-12](TTT-Linear-Fig-12.png)
+![TTT-Linear-Fig-12](../TTT-Linear-Fig-12.png)
 However, based on the right side figure provided above, I hypothesize that as the training FLOPs increase to the range of $10^{22}$ to $10^{23}$, the performance of TTT models and transformers may become similar.
 
 ## Possible research questions
