@@ -11,8 +11,17 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Oct 2019 21:40:07 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2024 13:05:44 +0200</lastBuildDate>
     <atom:link href="https://ftliao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning at Test Time</title>
+      <link>https://ftliao.github.io/posts/240807_learning_at_test_time/learning_at_test_time/</link>
+      <pubDate>Wed, 07 Aug 2024 13:05:44 +0200</pubDate>
+      <guid>https://ftliao.github.io/posts/240807_learning_at_test_time/learning_at_test_time/</guid>
+      <description>Learning at Test Time Recently, a new class of models known as Test-Time Training (TTT) has emerged as a viable alternative to the longstanding transformer architecture in large language models (LLMs) [4,5]. TTT models dynamically adjust their hidden states through gradient updates, offering a novel approach to enhancing model performance and adaptability.
+In this post, I document my notes about the idea of test-time-training.
+Test-Time-Training The concept of test-time training first emerged in the literature as a methodology to address distributional shifts occurring at test time, where the test data originate from a distribution that differs from the source data used during model training.</description>
+    </item>
     <item>
       <title>Wanna dance like a pro? A neural network can help you</title>
       <link>https://ftliao.github.io/posts/20191018_dance_like_pro/</link>
