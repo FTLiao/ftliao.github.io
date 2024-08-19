@@ -8,17 +8,17 @@ params:
 
 # Learning at Test Time
 
-Recently, a new family of model called Test-time-training (TTT) emerges as a contender to the long standing transformer architecture in LLM [5]. The TTT models adaptively adjusts its hidden states through gradient updates. 
+Recently, a new class of models known as Test-Time Training (TTT) has emerged as a viable alternative to the longstanding transformer architecture in large language models (LLMs) [4,5]. TTT models dynamically adjust their hidden states through gradient updates, offering a novel approach to enhancing model performance and adaptability.
 
 In this post, I document my notes about the idea of test-time-training.
 
 ## Test-Time-Training
 
-The idea of test-time-training first appears in the literature in studies to address distribution shifts at test time, where test data come from a different distribution than the source data used to train the model. 
+The concept of test-time training first emerged in the literature as a methodology to address distributional shifts occurring at test time, where the test data originate from a distribution that differs from the source data used during model training.
 
-Specifically, given input source data $x^s,y^s\sim\mathcal{P_s}$ for training a base model $\theta$ and adaptation parameter $\phi$ with objective $\mathcal{L}(x^s,y^s;\theta)+\mathcal{L}(x^s;\phi)$ and target data $x^t\sim\mathcal{P}_t$ at test time with objective $\mathcal{L}(x^t;\phi)$, TTT aims to learn the model parameters $\theta$ for solving a main task and $\phi$ for efficient adaptation of mappings to latent distributions at test-time.
+Specifically, given input source data $x^s,y^s\sim\mathcal{P_s}$ used for training a base model $\theta$ and adaptation parameter $\phi$, with objective $\mathcal{L}(x^s,y^s;\theta)+\mathcal{L}(x^s;\phi)$, and target data $x^t\sim\mathcal{P}_t$ encountered at test time with objective $\mathcal{L}(x^t;\phi)$, TTT aims to learn the model parameters $\theta$ for solving a main task and $\phi$ for efficient adaptation of mappings to latent distributions at test-time.
 
-Concretely, work by [1] proposes to learn a feature extraction model capable of aligning latent distributions at test time through a gradient update with self-supervised objective. Specifically, the training problem is
+Specifically, the work by [1] proposes the learning of a feature extraction model designed to align latent distributions at test time using a gradient-based update informed by a self-supervised objective. In particular, the training problem is formulated as follows:
 
 $$
 {\tilde{\theta_e},\tilde{\theta_m},\tilde{\theta_s}}\leftarrow\argmin_{\theta_e,\theta_m,\theta_s}\mathcal{L}(x^s,y^s;\theta_m,\theta_e)+\mathcal{L}(x^s;\theta_s,\theta_e),
@@ -26,7 +26,7 @@ $$
 
 where $\theta_m$ is the model for the main supervised task; $\theta_e$ is the feature extractor; $\theta_s$ is the self-supervised task model.
 
-At test-time, only the feature extractor is updated by minimizing the self-supervised task loss over the feature extractor model, i.e.
+At test-time, only the feature extractor is updated by minimizing the loss associated with the self-supervised task over the feature extraction model, specifically:
 
 $$
 \hat{\theta}_e\leftarrow\argmin_{\theta_{e}^{'}}\mathcal{L}(x^t;\tilde{\theta_s},\theta^{'}_e),
@@ -34,44 +34,47 @@ $$
 
 where $\theta_e^{'}$ is initialized with $\tilde{\theta}_e$. The final prediction is obtained by the optimized $\tilde{\theta_m}$ main task model and the updated feature extractor $\hat{\theta}_e$. 
 
-There are a couple of choices for the self-supervised task.
-- Prediction of rotated images by [1] is chosen for improving image classification task [1]; policy adaptation to perturbed environment [8].
-- Denoising masked images as in Mask Autoencoder by [2] is proposed to further improve the prediction accuracy of corrupted images
-- Denoising pseudo labels as in contrastive learning is proposed by [13] to update the feature extractor.
-- Denoising latents as in denoising auto-encoder by [5] tasks the learning of a model that keeps necessary latent information for sequence modelling.
+There are several options for the self-supervised task:
+- The prediction of rotated images, as proposed by [1], is employed to enhance image classification performance.
+- Policy adaptation to perturbed environments in RL, as described in [7], is another approach.
+- Denoising masked images, as implemented in the Mask Autoencoder by [2,3], is suggested to further improve prediction accuracy for corrupted images.
+- Denoising pseudo-labels, a method used in contrastive learning according to [11], is proposed for updating the feature extractor.
+- Denoising latent variables, similar to the approach in denoising autoencoders described by [5], focuses on preserving essential latent information for sequence modeling.
 
-The choice of denoising objective for self-supervised task seems to emerge as a more preferable choice. I hypothesize that such preference is due to that denoising objective is a more compute efficient (as measured by FLOPs/parameter) formulation than the others. It is similar to the trend in language modelling where the span prediction task in BERT is less used and next-token prediction task is dominant.
+The preference for the denoising objective in self-supervised tasks appears to be increasing. I hypothesize that this preference arises because the denoising objective is computationally more efficient, as measured by FLOPs per parameter, compared to alternative formulations. This trend is analogous to the field of language modeling, where the next-token prediction task has become dominant over the less frequently used span prediction task in models such as BERT.
 
-Other than [1], several test-time-training frameworks have been proposed 
-- [12] proposes Adaptive Risk Minimization where meta-parameters are learnt to adapt task parameters at test time either through contextual parameters or through gradient based meta-learning.
-- Dynamic evaluation [9, 17] can be view as treating subsequent elements in a sequence as new test data to which a model adapts. It adapts models to recent sequence history via gradient descent to exploit patterns in sequence. [6] extends the learning of adaptable weights at test time to train time with MAML and trains a bilevel model.
+In addition to the work presented in [1], several other test-time training frameworks have been proposed:
+- Adaptive Risk Minimization, as described in [10], introduces a method where meta-parameters are learned to adapt task parameters at test time. This adaptation can be achieved either through contextual parameters or via gradient-based meta-learning.
+- Dynamic Evaluation, discussed in [8,12], treats subsequent elements in a sequence as new test data to which the model must adapt. This approach involves adapting the model to recent sequence history through gradient descent to leverage patterns within the sequence. Furthermore, the work in [6] extends the concept of adaptable weights from test time to training time by employing MAML to train a bilevel model.
 
 ## Test-time-training in Sequence Modelling
 
-So the idea of TTT in sequence modelling for language had a long history since the work by [9, 17, 6]. However, previous work focus on applying TTT to the model parameters and not until recently by [5] that apply TTT to a model as hidden state, did a scalable language model competitive to decoder-only transformer (GPT) emerge. 
+The concept of test-time training (TTT) in sequence modeling for language has a long history, with foundational work by [8,12,6]. However, earlier research primarily focused on applying TTT to model parameters. It was not until the recent work by [5], which applied TTT to model hidden states, that a scalable language model competitive with decoder-only transformers, such as GPT, was developed.
 
-Below I summarize my notes in reading [5] and use TTT model synonomously to the TTT-Linear presented in [5].
+Below, I summarize my notes on [5], using 'TTT model' synonymously with the 'TTT-Linear' framework presented in [5].
 
-Sequence modelling can be viewed as storing history content into the hidden state. A summary is as follows (see the figure taken from [5] below). The hidden state of Naive RNN can be represented as an activation vector, updated by model parameters; that of self-attention is a list of uncompressed vectors of past keys and values; that of a Naive TTT is formulated as parameters of linear model, where updates to the model is via gradient decent over a self-supervised loss. [5] shows that the naive TTT case is equivalent to linear attention [29].
+Sequence modeling can be understood as a mechanism for storing historical content within the hidden state of the model. Here's a concise overview, with reference to the figure below from [5]:
 ![TTT-Linear-Fig-4](TTT-Linear-Fig-4.png)
+- Naive RNN: In a traditional RNN, the hidden state is represented as an activation vector, which is updated based on model parameters. This vector captures information from the sequence as it processes each new element.
+- Self-Attention: In models utilizing self-attention, the hidden state comprises a collection of uncompressed vectors corresponding to past keys and values. These vectors represent the sequence's historical information in a more granular form compared to RNNs.
+- Naive TTT: For a Naive TTT approach, the hidden state is formulated as parameters of a linear model. Here, updates to the model are performed through gradient descent applied to a self-supervised loss. This approach integrates adaptive mechanisms directly into the model's structure.
 
-From this point of view, TTT-Linear is a permuted view of the attention where instead of compressing and selecting the relevant information of history tokens via attention update, it keeps the relevant information via learning a model over the history tokens. The hidden state model would then remember input token that produce large gradients, i.e. inputs that makes the model learns a lot. Note that, computationally, the model is much efficient at the inference time as tokens are not cached for attention updates and in principle can be scaled more easily to sequence length in millions.
+According to [5], the Naive TTT approach is shown to be equivalent to linear attention, as detailed in [13]. From this perspective, TTT-Linear can be seen as a variant of the attention mechanism. Instead of compressing and selectively updating relevant historical information via attention, TTT-Linear assimilates to the attention by learning a model over the history tokens. The hidden state model, therefore, retains input tokens that generate significant gradients—essentially, those inputs that most influence the model's learning process. Notably, this approach offers computational efficiency during inference, as it eliminates the need to cache tokens for attention updates and can, in principle, be scaled more effectively to sequence lengths extending into the millions.
 
-The optimization of the TTT-Linear is bilevel, consisting of an inner loop and outer loop. The inner loop is the update to the hidden state model sequentially via gradient descent to a denoising autoencoding loss. The outer loop is the update to the rest of the model parameters to a next-token prediction loss. Unlike work in dynamic evaluation [6] where the bilevel optimization involves second order optimization, the optimization of innder loop and outer loop of TTT-Linear is decoupled. The inneer loop of TTT-Linear can be viewed as a layer of the neural model for language modelling.
+The optimization process for TTT-Linear is structured as a bilevel optimization problem, comprising an inner loop and an outer loop. The inner loop involves updating the hidden state model sequentially via gradient descent based on a denoising autoencoding loss. The outer loop focuses on updating the remaining model parameters with respect to a next-token prediction loss. In contrast to dynamic evaluation [6], where bilevel optimization involves second-order optimization techniques, the optimization in TTT-Linear decouples the inner and outer loops. Specifically, the inner loop in TTT-Linear can be conceptualized as an additional layer within the neural model for language modeling.
 
-The author scales the model to 1.3B parameters and shows that it outperforms transformer when one trains the model with seqnece length at 32k (See Figure below. Taken from Figure 12 of [5]). 
+The TTT model is scaled to 1.3 billion parameters and demonstrated that it outperforms transformers when trained with a sequence length of 32k tokens (see Figure below, adapted from Figure 12 of [5]).
 ![TTT-Linear-Fig-12](TTT-Linear-Fig-12.png)
-
-
-However, given the right figure above, I hypothesize that as training FLOPs increases to 1E22 ~ 1E23, the TTT models and transformers may perform similarily.
+However, based on the right side figure provided above, I hypothesize that as the training FLOPs increase to the range of $10^{22}$ to $10^{23}$, the performance of TTT models and transformers may become similar.
 
 ## Possible research questions
 
-Personally, I think the breakthrough builds upon two innovations: equivalence of TTT with a linear model and batch gradient descent to linear attention [29]; decoupling the gradient updates to the fast model (TTT layer) and slow model (rest of LM). I surmise that the following research direction may be worth pursing in light of the idea of TTT
-- Can we extend LLM decoding head for multi-token prediction through TTT or dynamic evaluation? 
-- Can we convert a pre-trained transformer to TTT-Linear for speeding up LLM inference?
-- Can we formulate the layer forward process in transformer with TTT such that at inference time we do not have to walk through every layer of the transformer?
-- How much memory of the hidden state model can store? Can we extract the stored memory for an update to the slow model in return?
+Personally, I believe the breakthrough in this area is built upon two key innovations: the equivalence of TTT with a linear model and batch gradient descent applied to linear attention [13], and the decoupling of gradient updates between the fast model (the TTT layer) and the slow model (the remainder of the language model). In light of these advancements, I surmise that the following research directions may be promising:
+- **Extending LLM Decoding for Multi-Token Prediction**: Can we apply TTT or dynamic evaluation to enhance the decoding head of large language models (LLMs) for more efficient multi-token prediction?
+- **Converting Pre-Trained Transformers to TTT-Linear**: Is it feasible to convert a pre-trained transformer model to a TTT-Linear framework to accelerate LLM inference?
+- **Formulating Forward Pass with TTT**: Can we reformulate the forward pass of transformer layers using TTT so that at inference time, we avoid the need to process every layer sequentially and skip certain layers for easier tokens?
+- **Memory Capacity and Utilization for Updates to Slow Weights**: How much memory can the hidden state model effectively store? Can we leverage this stored memory to facilitate updates to the slow model in a meaningful way?
+
 
 ## Reference
 [1] Test-Time Training with Self-Supervision for Generalization under Distribution Shifts, 2020 \
@@ -80,16 +83,9 @@ Personally, I think the breakthrough builds upon two innovations: equivalence of
 [4] Learning to (Learn at Test Time), 2024 \
 [5] Learning to (Learn at Test Time): RNNs with Expressive Hidden State, 2024 \
 [6] Meta-Learning Fast Weight Language Models, 2022 \
-[7] Self-Supervised Test-Time Learning for Reading Comprehension, 2021 \
-[8] Self-Supervised Policy Adaptation during Deploymedelnt, 2021 \
-[9] Dynamic Evaluation of Neural Sequence Model, 2017 \
-[10] Test-time prompt tuning for zero-shot generalization in vision-language models, 2022 \
-[11] Align Your Prompts: Test-Time Prompting with Distribution Alignment for Zero-Shot Generalization, 2023 \
-[12] Adaptive Risk Minimization: Learning to Adapt to Domain Shift, 2021 \
-[13] Contrastive Test-Time Adaptation, 2023 \
-[14] Back to the Source: Diffusion-Driven Adaptation to Test-Time Corruption, 2024 \
-[15] Fast Model Editing at Scale, 2022 \
-[16] TENT: Fully Test-Time Adaptation by Entropy Minimization, 2021 \
-[17] Dynamic Evaluation of Transformer Language Models, 2019 \
-[19] Transformers are rnns: Fast autoregressive transformers with linear attention, 2020 \
-[20] LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale, 2022
+[7] Self-Supervised Policy Adaptation during Deploymedelnt, 2021 \
+[8] Dynamic Evaluation of Neural Sequence Model, 2012 \
+[10] Adaptive Risk Minimization: Learning to Adapt to Domain Shift, 2021 \
+[11] Contrastive Test-Time Adaptation, 2023 \
+[12] Dynamic Evaluation of Transformer Language Models, 2019 \
+[13] Transformers are rnns: Fast autoregressive transformers with linear attention, 2020
