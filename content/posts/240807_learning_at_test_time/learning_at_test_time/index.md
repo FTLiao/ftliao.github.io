@@ -1,7 +1,7 @@
 ---
 title: 'Learning at Test Time'
 date: 2024-08-07T13:05:44+02:00
-draft: true
+draft: false
 params:
     math: true
 ---
