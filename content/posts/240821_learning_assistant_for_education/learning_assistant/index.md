@@ -6,9 +6,9 @@ params:
     math: true
 ---
 
-# Learing Assistant for Education
+<!-- # Learing Assistant for Education -->
 
-There has been much development of ML in EduTech. One notable effort as an example is Andrej's effort in building a start aiming to apply AI assistns to education ([link to news](https://techcrunch.com/2024/07/16/after-tesla-and-openai-andrej-karpathys-startup-aims-to-apply-ai-assistants-to-education/)). 
+There has been much development of ML in EduTech. One notable effort as an example is Andrej Karpathy's effort in building a startup aiming to apply an AI learning assistant to education ([link to news](https://techcrunch.com/2024/07/16/after-tesla-and-openai-andrej-karpathys-startup-aims-to-apply-ai-assistants-to-education/)). 
 
 In this post, I will share my notes on such a learning assistant.
 
