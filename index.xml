@@ -18,7 +18,7 @@
       <link>https://ftliao.github.io/posts/240821_learning_assistant_for_education/learning_assistant/</link>
       <pubDate>Wed, 21 Aug 2024 13:05:44 +0200</pubDate>
       <guid>https://ftliao.github.io/posts/240821_learning_assistant_for_education/learning_assistant/</guid>
-      <description>Learing Assistant for Education There has been much development of ML in EduTech. One notable effort as an example is Andrej&amp;rsquo;s effort in building a start aiming to apply AI assistns to education (link to news).
+      <description>There has been much development of ML in EduTech. One notable effort as an example is Andrej Karpathy&amp;rsquo;s effort in building a startup aiming to apply an AI learning assistant to education (link to news).
 In this post, I will share my notes on such a learning assistant.
 I will begin by defining my understanding of learning, followed by outline the properties of a learning assistant that effectively supports a learner&amp;rsquo;s educational journey.</description>
     </item>
@@ -27,7 +27,7 @@ I will begin by defining my understanding of learning, followed by outline the p
       <link>https://ftliao.github.io/posts/240807_learning_at_test_time/learning_at_test_time/</link>
       <pubDate>Wed, 07 Aug 2024 13:05:44 +0200</pubDate>
       <guid>https://ftliao.github.io/posts/240807_learning_at_test_time/learning_at_test_time/</guid>
-      <description>Learning at Test Time Recently, a new class of models known as Test-Time Training (TTT) has emerged as a viable alternative to the longstanding transformer architecture in large language models (LLMs) [4,5]. TTT models dynamically adjust their hidden states through gradient updates, offering a novel approach to enhancing model performance and adaptability.
+      <description>Recently, a new class of models known as Test-Time Training (TTT) has emerged as a viable alternative to the longstanding transformer architecture in large language models (LLMs) [4,5]. TTT models dynamically adjust their hidden states through gradient updates, offering a novel approach to enhancing model performance and adaptability.
 In this post, I document my notes about the idea of test-time-training.
 Test-Time-Training The concept of test-time training first emerged in the literature as a methodology to address distributional shifts occurring at test time, where the test data originate from a distribution that differs from the source data used during model training.</description>
     </item>
