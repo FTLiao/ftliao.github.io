@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Feng-Ting Liao | Particles of Worlds</title>
-    <link>http://localhost:3131/categories/</link>
+    <link>https://ftliao.github.io/categories/</link>
     <description>Recent content in Categories on Feng-Ting Liao | Particles of Worlds</description>
     <image>
       <title>Feng-Ting Liao | Particles of Worlds</title>
-      <url>http://localhost:3131/images/openimage.jpg</url>
-      <link>http://localhost:3131/images/openimage.jpg</link>
+      <url>https://ftliao.github.io/images/openimage.jpg</url>
+      <link>https://ftliao.github.io/images/openimage.jpg</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:3131/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ftliao.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
