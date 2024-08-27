@@ -11,8 +11,17 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2024 13:05:44 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2024 13:05:44 +0200</lastBuildDate>
     <atom:link href="https://ftliao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learing Assistant for Education</title>
+      <link>https://ftliao.github.io/posts/240821_learning_assistant_for_education/learning_assistant/</link>
+      <pubDate>Wed, 21 Aug 2024 13:05:44 +0200</pubDate>
+      <guid>https://ftliao.github.io/posts/240821_learning_assistant_for_education/learning_assistant/</guid>
+      <description>Learing Assistant for Education There has been much development of ML in EduTech. One notable effort as an example is Andrej&amp;rsquo;s effort in building a start aiming to apply AI assistns to education (link to news).
+In this post, I will share my notes on such a learning assistant.
+I will begin by defining my understanding of learning, followed by outline the properties of a learning assistant that effectively supports a learner&amp;rsquo;s educational journey.</description>
+    </item>
     <item>
       <title>Learning at Test Time</title>
       <link>https://ftliao.github.io/posts/240807_learning_at_test_time/learning_at_test_time/</link>
