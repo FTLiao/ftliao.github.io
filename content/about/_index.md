@@ -9,11 +9,11 @@ params:
 [[cv](https://ftliao.github.io/data/FengTingLiao_CV.pdf)][[resume](https://ftliao.github.io/data/FengTingLiao_resume.pdf)][[googlescholar](https://scholar.google.com/citations?user=wQtfX2cAAAAJ&hl=en)][[linkedin](https://www.linkedin.com/in/fengtingliao)]
 
 
-<!-- I am a Senior Research Scientist at MediaTek Research, working on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, EACL, ASRU. -->
+<!-- I am a Senior Research Scientist at MediaTek Research, working on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, ACL, NAACL, ASRU. -->
 
 <!-- seasoned technical professional with a strong background in machine learning, natural language processing, and chip design. My expertise lies not only in developing cutting-edge technologies but also in effectively communicating complex ideas and orchestrating cross-functional collaborations to bring innovative products to market. -->
 
-I am a Senior Research Scientist at MediaTek Research with a track record on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, EACL, ASRU. 
+I am a Senior Research Scientist at MediaTek Research with a track record on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, ACL, NAACL, ASRU. 
 
 My expertise lies not only in developing cutting-edge technologies but also in effectively communicating complex ideas and synergizing cross-functional collaborations to bring innovative products to market. With a team of talented researchers and seasoned professionals across legal, product, and marketing, I co-created and productized **[BreeXe-8x7B](https://huggingface.co/spaces/MediaTek-Research/Demo-MR-Breexe-8x7B), a commercialized LLM beating GPT3.5 on both knowledge and chat capabilities in Traditional Chinese**, and open-sourced **[Breeze-7B](https://huggingface.co/MediaTek-Research/Breeze-7B-Instruct-v1_0), a 7B LLM with >11k downloads**, for supporting research and entrepreneural efforts in LLMs in Traditional Chinese speaking communities.
 
@@ -31,7 +31,10 @@ To get in touch, please email to *fengting.liao19[AT]gmail.com*
 
 
 ### Selected Publications
-- Let's Fuse Step by Step: A Generative Fusion Decoding Algorithm with LLMs for Multi-modal Text Recognition, Hsu et al., Preprint ,2024 ([paper](https://arxiv.org/pdf/2405.14259), [code](https://github.com/mtkresearch/generative-fusion-decoding))
+- Latent Flow Transformer, Wu et al., preprint, 2025 ([paper](https://arxiv.org/abs/2505.14513))
+- Group Think: Multiple Concurrent Reasoning Agents Collaborating at Token Level Granularity, Hsu et al., preprint, 2025 ([paper](https://arxiv.org/abs/2505.11107))
+- Let's Fuse Step by Step: A Generative Fusion Decoding Algorithm with LLMs for Multi-modal Text Recognition, Hsu et al., ACL ,2025 ([paper](https://arxiv.org/pdf/2405.14259), [code](https://github.com/mtkresearch/generative-fusion-decoding))
+- RAD-Bench: Evaluating Large Language Models Capabilities in Retrieval Augmented Dialogues, Kuo et al., NAACL (Industry Track), 2025 ([paper](https://arxiv.org/abs/2409.12558), [code](https://github.com/mtkresearch/RAD-Bench))
 - Breeze-7B Technical Report, MediaTek Research, 2024 ([paper](https://arxiv.org/abs/2403.02712), [model weight](https://huggingface.co/MediaTek-Research/Breeze-7B-Base-v1_0))
 - Image generation with shortest path diffusion, Das et al., ICML, 2023 ([paper](https://arxiv.org/abs/2306.00501), [code](https://github.com/mtkresearch/shortest-path-diffusion))
 - Zero-Shot Domain-Sensitive Speech Recognition with Prompt-Conditioning Fine-Tuning, Liao et al., ASRU, 2023 ([paper](https://arxiv.org/pdf/2307.10274), [code](https://github.com/mtkresearch/clairaudience))

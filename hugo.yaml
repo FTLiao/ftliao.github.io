@@ -75,7 +75,7 @@ params:
   homeInfoParams:
     Title: "\U00002604 [Feng-Ting Liao](https://ftliao.github.io/about/)"
     # HypLinks: "[[About me](https://ftliao.github.io/about/)] | [[Posts]()]"
-    Content: "Senior Research Scientist at [MediaTek Research](https://i.mediatek.com/mediatekresearch),  working on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, EACL, ASRU. Co-creator of [Breeze-7B](https://huggingface.co/MediaTek-Research/Breeze-7B-Instruct-v1_0), [BreeXe-8x7B](https://huggingface.co/spaces/MediaTek-Research/Demo-MR-Breexe-8x7B), [GFD](https://github.com/mtkresearch/generative-fusion-decoding), and [Clairaudience](https://github.com/mtkresearch/clairaudience). Prevously a [dark matter hunter](https://lz.lbl.gov) at Oxford University. Opinions are my own."
+    Content: "Senior Research Scientist at [MediaTek Research](https://i.mediatek.com/mediatekresearch),  working on large language models, deep reinforcement learning in chip design, diffusion models, speech processing, and representation learning with publications at ICML, ACL, NAACL, ASRU. Co-creator of [Breeze-7B](https://huggingface.co/MediaTek-Research/Breeze-7B-Instruct-v1_0), [BreeXe-8x7B](https://huggingface.co/spaces/MediaTek-Research/Demo-MR-Breexe-8x7B), [GFD](https://github.com/mtkresearch/generative-fusion-decoding), and [Clairaudience](https://github.com/mtkresearch/clairaudience). Prevously a [dark matter hunter](https://lz.lbl.gov) at Oxford University. Opinions are my own."
 
   customCSS:
     - css/custom.css 
